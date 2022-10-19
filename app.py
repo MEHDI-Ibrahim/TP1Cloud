@@ -16,7 +16,7 @@ def register():
 		first_name = request.form.get("fname")
 		last_name = request.form.get("lname")
 		profession = request.form.get("profession")
-		return "Bonjour "+first_name + last_name
+		return "Bonjour "+first_name +" "+ last_name
 		return render_template("index.html")
 
 if __name__=='__main__':
