@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 # A decorator used to tell the application
 # which URL is associated function
-@app.route('/')
+@app.route('/', methods=["GET"])
 def home():
     return render_template('index.html')
-@app.route('/register', methods =["GET", "POST"])
 
+@app.route('/register', methods =["GET", "POST"])
 def register():
 	if request.method == "POST":
 		first_name = request.form.get("fname")
